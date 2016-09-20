@@ -21,6 +21,8 @@
 ## Source IP affinity mode
 We have introduced a new distribution mode called Source IP Affinity (also known as session affinity or client IP affinity). Azure Load Balancer can be configured to use a 2 tuple (Source IP, Destination IP) or 3 tuple (Source IP, Destination IP, Protocol) to map traffic to the available servers. By using Source IP affinity, connections initiated from the same client computer goes to the same DIP endpoint.
 
+[AZURE.INCLUDE [learn-about-deployment-models](../../includes/learn-about-deployment-models-classic-include.md)]
+
 ![session affinity](./media/load-balancer-distribution-mode/load-balancer-session-affinity.png)
 
 Source IP affinity solves an incompatibility between the Azure Load Balancer and RD Gateway. Now you can build a RD gateway farm in a single cloud service. Another usage scenario is media upload where the real data upload happens through UDP but the control plane is achieved through TCP:
