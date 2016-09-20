@@ -19,6 +19,8 @@
 
 SQL Server AlwaysOn Availability Groups can now be run with ILB. Availability Group is SQL Server’s flagship solution for high availability and disaster recovery. The Availability Group Listener allows client applications to seamlessly connect to the primary replica, irrespective of the number of the replicas in the configuration.
 
+[AZURE.INCLUDE [learn-about-deployment-models](../../includes/learn-about-deployment-models-classic-include.md)]
+
 The listener (DNS) name is mapped to a load-balanced IP address and Azure’s load balancer directs the incoming traffic to only the primary server in the replica set. 
 
 
