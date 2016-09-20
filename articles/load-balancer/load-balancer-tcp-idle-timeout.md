@@ -21,6 +21,8 @@ In its default configuration, Azure Load Balancer has an idle timeout setting of
 
 This means that if a period of inactivity is longer than the timeout value, there's no guarantee that the TCP or HTTP session between the client and your cloud service still exists.
 
+[AZURE.INCLUDE [learn-about-deployment-models](../../includes/learn-about-deployment-models-classic-include.md)]  
+
 When the connection is closed, your client application will get an error message like "The underlying connection was closed: A connection that was expected to be kept alive was closed by the server."
 
 A common practice to keep the connection active for a longer period is to use a TCP keep-alive. (You can find [.NET examples](https://msdn.microsoft.com/library/system.net.servicepoint.settcpkeepalive.aspx).) Packets are sent when no activity is detected on the connection. This network activity ensures that the idle timeout value is never reached and the connection is maintained for a long period.
