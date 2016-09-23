@@ -163,7 +163,7 @@ Finally, you must factor in the SLA for Traffic Manager, which is 99.99% at the 
 Composite SLA = 99.99% x [combined SLA for both regions]
 ```
 
-A further detail is that failing over is not instantaneous, which can result in some downtime during a failover event. Azure Traffic Manager uses DNS, so the time-to-live (TTL ) of the DNS entries adds to the total failover time. See [Traffic Manager endpoint monitoring and failover][tm-failover].
+A further detail is that failing over is not instantaneous, which can result in some downtime during a failover process. Azure Traffic Manager uses DNS, so the time-to-live (TTL) of the DNS entries adds to the total failover time as well as endpoint health checks period, timeout, and retry count. See [Traffic Manager endpoint monitoring and failover][tm-failover].
 
 The calculated SLA number is a useful baseline, but it doesn't tell the whole story about availability. Often, an application can degrade gracefully when a non-critical path fails. Consider an application that shows a catalog of books. If the application can't retrieve the thumbnail image for the cover, it might show a placeholder image. In that case, failing to get the image does not reduce the application's uptime, although it affects the user experience somewhat.  
 
