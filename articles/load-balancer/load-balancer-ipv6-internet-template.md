@@ -43,7 +43,7 @@ In this scenario you will create the following Azure resources:
 
 ## Deploying the template using the Azure portal
 
-This article references a template that is published in the [Azure Quickstart Templates](https://azure.microsoft.com/documentation/templates/) gallery. You can download the template from the gallery or launch the deployment in Azure directly from the gallery. This article assumes you have downloaded the template to your local computer.
+This article references a template that is published in the [Azure Quickstart Templates](https://azure.microsoft.com/documentation/templates/) gallery. You can [download the template](https://github.com/Azure/azure-quickstart-templates/tree/master/201-load-balancer-ipv6-create) from the gallery or [launch the deployment](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-load-balancer-ipv6-create%2Fazuredeploy.json) in Azure directly from the gallery. This article assumes you have downloaded the template to your local computer.
 
 1. Open the Azure portal and sign in with an account that has permissions to create VMs and networking resources within an Azure subscription. Also, unless you're using existing resources, the account needs permission to create a resource group and a storage account.
 
@@ -95,7 +95,7 @@ When the template has deployed successfully, you can validate connectivity by co
 4. From each VM, initiate an outbound connection to an IPv6 or IPv4-connected Internet device. In both cases, the source IP seen by the destination device is the public IPv4 or IPv6 address of the load balancer.
 
 >[AZURE.NOTE]
-ICMP for both IPv4 and IPv6 is blocked in the Azure network. As a result, ICMP tools like ping always fail. To test connectivity, use a TCP alternative such as TCPing or the PowerShell Test-NetConnection cmdlet. Note that the IP addresses shown in the diagram are examples of values that you might see. Since the IPv6 addresses are assigned dynamically, the addresses you receive will differ and can vary by region. Also, it is common for the public IPv6 address on the load balancer to start with a different prefix than the private IPv6 addresses in the back-end pool.
+ICMP for both IPv4 and IPv6 is blocked in the Azure network. As a result, ICMP tools like ping always fail. To test connectivity, use a TCP alternative such as TCPing, PsPing or the PowerShell Test-NetConnection cmdlet. Note that the IP addresses shown in the diagram are examples of values that you might see. Since the IPv6 addresses are assigned dynamically, the addresses you receive will differ and can vary by region. Also, it is common for the public IPv6 address on the load balancer to start with a different prefix than the private IPv6 addresses in the back-end pool.
 
 ## Template parameters and variables
 
